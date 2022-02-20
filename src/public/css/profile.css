@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e5e9ec;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem;
+    padding: 20px;
+    background: #FFFFFF;
+    color: #333333;
+    border-radius: 10px;
+}
+
+.container a {
+    width: 100%;
+    max-width: 120px;
+    text-decoration: none;
+    border-radius: 1rem;
+    text-align: center;
+    background: #F45656;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 2px;
+    align-self: flex-end;
+}
+
+.container a:hover {
+    background: #EF1010;
+    color: #FFFFFF;
+}
+
+.container h3 {
+    font-weight: 700;
+}
+
+.container h4 {
+    font-weight: 500;
+}
+
+.data {
+    margin-top: .5rem;
+}
+
+.jobs {
+    height: 100%;
+    max-height: 480px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.jobs::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.jobs::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.jobs::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+.jobs::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+}
+.jobs::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+}
+
+.jobs .job__container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+}
+::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+}
