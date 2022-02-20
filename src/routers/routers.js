@@ -46,7 +46,7 @@ router.post('/SignUp', async (req, res) => {
 router.get('/SignIn', (req, res) => {
     const session = supabase.auth.session()
     
-    session !== null ? res.redirect('/UserArea') : res.render('SignIn');
+    session !== null ? res.redirect('/UserProfile') : res.render('SignIn');
 })
 
 router.post('/SignIn', async (req, res) => {
