@@ -49,7 +49,9 @@ router.post("/SignIn", async (req, res) => {
 
     if (error) throw error;
 
-    session !== null ? res.redirect("/UserProfile") : res.render("SignIn");
+    session !== null
+      ? res.redirect("/UserProfile/" + session.user.id)
+      : res.render("SignIn");
   } catch (error) {
     console.error(error);
   }
@@ -60,7 +62,7 @@ router.get("/SignOut", async (req, res) => {
   res.redirect("/SignIn");
 });
 
-router.get("/UserProfile", (req, res) => {
+router.get("/UserProfile/:id", async (req, res) => {
   try {
     const session = supabase.auth.session();
     const userData = supabase.auth.user();
@@ -79,16 +81,12 @@ router.get("/UserProfile", (req, res) => {
   } catch (error) {}
 });
 
-router.post("/UserProfile", async (req, res) => {
+router.post("/UserProfile/:id", async (req, res) => {
   const { name, company, city, description } = req.body;
 
   console.log(name, company, city, description);
 
   res.redirect("UserProfile");
 });
-
-async function getJobsForUser(user_id) {
-  let { data: jobs, error } = await supabase.from("jobs").select("user_id");
-}
 
 module.exports = router;
